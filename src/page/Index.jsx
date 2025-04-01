@@ -46,23 +46,38 @@ const Main = ({ Cur_Sec, setCur_Sec }) => {
     <>
       <aside className="Main_Nav">
         <ul className={Cur_Sec !== 0 ? "on" : "on0"}>
-          <li className={Cur_Sec === 0 ? "Active" : ""} onClick={() => handleNavClick(0)}>
+          <li
+            className={Cur_Sec === 0 ? "Active" : ""}
+            onClick={() => handleNavClick(0)}
+          >
             <em></em>
             <span>Main</span>
           </li>
-          <li className={Cur_Sec === 1 ? "Active" : ""} onClick={() => handleNavClick(1)}>
+          <li
+            className={Cur_Sec === 1 ? "Active" : ""}
+            onClick={() => handleNavClick(1)}
+          >
             <em></em>
             <span>Sec 1</span>
           </li>
-          <li className={Cur_Sec === 2 ? "Active" : ""} onClick={() => handleNavClick(2)}>
+          <li
+            className={Cur_Sec === 2 ? "Active" : ""}
+            onClick={() => handleNavClick(2)}
+          >
             <em></em>
             <span>Sec 2</span>
           </li>
-          <li className={Cur_Sec === 3 ? "Active" : ""} onClick={() => handleNavClick(3)}>
+          <li
+            className={Cur_Sec === 3 ? "Active" : ""}
+            onClick={() => handleNavClick(3)}
+          >
             <em></em>
             <span>Sec 3</span>
           </li>
-          <li className={Cur_Sec === 4 ? "Active" : ""} onClick={() => handleNavClick(4)}>
+          <li
+            className={Cur_Sec === 4 ? "Active" : ""}
+            onClick={() => handleNavClick(4)}
+          >
             <em></em>
             <span>Sec 4</span>
           </li>
@@ -70,10 +85,16 @@ const Main = ({ Cur_Sec, setCur_Sec }) => {
       </aside>
 
       <div id="Full_Page">
-        <section className="Main_Visual Sec" ref={(el) => (Ref_Sec.current[0] = el)}>
+        <section
+          className="Main_Visual Sec"
+          ref={(el) => (Ref_Sec.current[0] = el)}
+        >
           <div className="Inner">
             <video autoPlay loop muted>
-              <source src={process.env.PUBLIC_URL + "/video/main.mp4"} type="video/mp4" />
+              <source
+                src={process.env.PUBLIC_URL + "/video/main.mp4"}
+                type="video/mp4"
+              />
             </video>
             <div className="Scroll_Img">
               <img src={process.env.PUBLIC_URL + "/img/scroll.png"} alt="" />

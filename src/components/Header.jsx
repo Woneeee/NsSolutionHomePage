@@ -17,20 +17,36 @@ const Header = ({ Cur_Sec, Location }) => {
   console.log("PATH", PATH);
   const NotHome = PATH !== "/";
 
-  const Logo_Src = Cur_Sec === 0 && !Hovered && !NotHome ? `${process.env.PUBLIC_URL}/img/NS_logo_W.png` : `${process.env.PUBLIC_URL}/img/NS_logo_B.png`;
+  const Logo_Src =
+    Cur_Sec === 0 && !Hovered && !NotHome
+      ? `${process.env.PUBLIC_URL}/img/NS_logo_W.png`
+      : `${process.env.PUBLIC_URL}/img/NS_logo_B.png`;
 
   return (
-    <header className={`Header ${Cur_Sec !== 0 || Hovered || NotHome ? "Main_ACT" : ""}`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+    <header
+      className={`Header ${
+        Cur_Sec !== 0 || Hovered || NotHome ? "Main_ACT" : ""
+      }`}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <div className="Inner">
         <h1 className="Logo">
           <Link to="/" className="Route_Link">
-            <img className="Logo_IMG" src={`${process.env.PUBLIC_URL}/img/logo.svg`} alt="NS Logo" />
+            <img
+              className="Logo_IMG"
+              src={`${process.env.PUBLIC_URL}/img/logo.svg`}
+              alt="NS Logo"
+            />
           </Link>
         </h1>
         <nav className="gnb">
           <ul className="Main_Menu">
             <li>
-              <Link to="/about/company" className={PATH.startsWith("/about") ? "active" : ""}>
+              <Link
+                to="/about/company"
+                className={PATH.startsWith("/about") ? "active" : ""}
+              >
                 ABOUT US
               </Link>
               <ul className="Sub_Menu">
@@ -52,7 +68,10 @@ const Header = ({ Cur_Sec, Location }) => {
               </ul>
             </li>
             <li>
-              <Link to="/business/software" className={PATH.startsWith("/business") ? "active" : ""}>
+              <Link
+                to="/business/software"
+                className={PATH.startsWith("/business") ? "active" : ""}
+              >
                 BUSINESS
               </Link>
               <ul className="Sub_Menu">
@@ -68,7 +87,10 @@ const Header = ({ Cur_Sec, Location }) => {
               </ul>
             </li>
             <li>
-              <Link to="/solution" className={PATH.startsWith("/solution") ? "active" : ""}>
+              <Link
+                to="/solution"
+                className={PATH.startsWith("/solution") ? "active" : ""}
+              >
                 SOLUTION
               </Link>
               <ul className="Sub_Menu">
@@ -87,7 +109,10 @@ const Header = ({ Cur_Sec, Location }) => {
               </ul>
             </li>
             <li>
-              <Link to="/board/news" className={PATH.startsWith("/board") ? "active" : ""}>
+              <Link
+                to="/board/news"
+                className={PATH.startsWith("/board") ? "active" : ""}
+              >
                 NOTICE
               </Link>
               <ul className="Sub_Menu">

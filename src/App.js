@@ -23,7 +23,10 @@ const App = () => {
       <Header Cur_Sec={Cur_Sec} Location={Location} />
       <main className={Location.pathname !== "/" ? "Sub_Page" : "Main_Page"}>
         <Routes>
-          <Route path="/" element={<Index Cur_Sec={Cur_Sec} setCur_Sec={setCur_Sec} />} />
+          <Route
+            path="/"
+            element={<Index Cur_Sec={Cur_Sec} setCur_Sec={setCur_Sec} />}
+          />
           <Route path="/about/company" element={<Company />} />
         </Routes>
       </main>
