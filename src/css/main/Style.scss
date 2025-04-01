@@ -1,0 +1,173 @@
+/* 네비게이션 */
+.Main_Nav {
+  position: fixed;
+  top: 50%;
+  left: 100px;
+  transform: translateY(-50%);
+  z-index: 10;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+
+      em {
+        position: relative;
+        display: block;
+        width: 20px;
+        height: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+
+          width: 8px;
+          height: 8px;
+          background: rgba(255, 255, 255, 0.5);
+          border-radius: 50%;
+          animation: none;
+        }
+      }
+
+      span {
+        display: block;
+        color: rgba(255, 255, 255, 0.5);
+
+        transition: 0.4s;
+      }
+
+      &.Active span,
+      &:hover span {
+        color: var(--white-color);
+      }
+    }
+
+    &.on li {
+      em {
+        border: 1px solid var(--white-color-3);
+        &::before {
+          background: var(--white-color-3);
+        }
+      }
+      span {
+        color: var(--white-color-3);
+      }
+      &.Active {
+        span {
+          color: var(--blue-color);
+        }
+        em {
+          border: 1px solid var(--blue-color);
+          animation: Main_Nav_Em 1.5s ease-in-out infinite;
+          &::before {
+            background: var(--blue-color);
+          }
+        }
+      }
+    }
+    &.on0 li {
+      span {
+        color: var(--white-color);
+      }
+      &.Active em {
+        border: 1px solid var(--white-color);
+        animation: Main_Nav_Em 1.5s ease-in-out infinite;
+        &::before {
+          background: var(--white-color);
+        }
+      }
+    }
+  }
+}
+
+@keyframes Main_Nav_Em {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+.Main_Nav ul.on li .Main_Nav ul.on li.Active span,
+.Main_Nav ul.on li:hover span {
+  color: var(--blue-color);
+}
+
+/* 메인 페이지 */
+#Full_Page {
+  overflow: hidden;
+  height: 100vh !important;
+  width: 100% !important;
+}
+
+#Full_Page .Sec {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Main_Visual .Inner {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.Main_Visual .Inner video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Main_Visual .Inner .Scroll_Img {
+  position: absolute;
+  bottom: 50px;
+  right: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.Main_Visual .Inner .Scroll_Img img {
+  width: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px var(--white-color);
+  animation: Scroll 1s ease-in-out infinite;
+}
+
+@keyframes Scroll {
+  0% {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+  }
+}

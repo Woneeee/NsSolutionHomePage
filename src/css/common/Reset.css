@@ -1,0 +1,140 @@
+/* reset.css */
+
+/* font */
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin and padding */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+blockquote,
+dl,
+dd {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remove default blockquote styles */
+blockquote,
+q {
+  quotes: none;
+}
+
+/* Remove default quote styles */
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: "";
+  content: none;
+}
+
+/* Remove default table border */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Reset some commonly used elements to remove their default styling */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+em,
+i,
+address {
+  font-style: normal;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* Reset form elements to avoid inconsistent styles */
+button,
+input {
+  overflow: visible;
+}
+
+/* Correct font family inheritance for form elements */
+button,
+select {
+  text-transform: none;
+}
+
+/* Remove inner spacing in Internet Explorer */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+/* Reset buttons and inputs to cursor:pointer to improve usability */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  background: none;
+}
+
+/* input number arrows hide */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+:focus-visible {
+  outline: none;
+}
+
+/* Optional: Add some basic styles for the body */
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  word-break: keep-all;
+  color: inherit;
+}

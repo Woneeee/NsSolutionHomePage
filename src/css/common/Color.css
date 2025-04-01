@@ -1,0 +1,85 @@
+:root {
+  --white-color: #fff;
+  --red-color: #ea002c;
+  --orange-color: #f47725;
+  --yellow-color: #fbbc05;
+  --green-color: #b3cf0a;
+  --blue-color: #00a8ea;
+  --violet-color: #0e306d;
+  --purple-color: #68127a;
+  --pink-color: #e7239c;
+  --aqua-color: #00f2fe;
+  --gray-color: #8c96a5;
+  --black-color: #000;
+  --wrap-color: #0d1023;
+  --card-color: #1a2130;
+
+  --red-color-1: #ca162b;
+  --red-color-2: #a51223;
+  --red-color-3: #810e1c;
+  --red-color-4: #5c0a14;
+  --red-color-5: #37060c;
+
+  --orange-color-1: #ca5816;
+  --orange-color-2: #a54812;
+  --orange-color-3: #81380e;
+  --orange-color-4: #5c280a;
+  --orange-color-5: #371806;
+
+  --yellow-color-1: #cabe16;
+  --yellow-color-2: #a59b12;
+  --yellow-color-3: #81790e;
+  --yellow-color-4: #5c560a;
+  --yellow-color-5: #373406;
+
+  --green-color-1: #16ca5b;
+  --green-color-2: #12a54b;
+  --green-color-3: #0e813a;
+  --green-color-4: #0a5c29;
+  --green-color-5: #063719;
+
+  --blue-color-1: #163aca;
+  --blue-color-2: #1230a5;
+  --blue-color-3: #0e2581;
+  --blue-color-4: #0a1b5c;
+  --blue-color-5: #061037;
+
+  --violet-color-1: #2a0bd5;
+  --violet-color-2: #2209ae;
+  --violet-color-3: #1a0788;
+  --violet-color-4: #130561;
+  --violet-color-5: #04033a;
+
+  --purple-color-1: #9116ca;
+  --purple-color-2: #7712a5;
+  --purple-color-3: #5c0e81;
+  --purple-color-4: #420a5c;
+  --purple-color-5: #280637;
+
+  --pink-color-1: #ca1685;
+  --pink-color-2: #a5126d;
+  --pink-color-3: #810e55;
+  --pink-color-4: #5c0a3d;
+  --pink-color-5: #370624;
+
+  --aqua-color-1: #0bd5cb;
+  --aqua-color-2: #09aea6;
+  --aqua-color-3: #078881;
+  --aqua-color-4: #05615c;
+  --aqua-color-5: #033a37;
+
+  --white-color-1: #d6d6d6;
+  --white-color-2: #c2c2c2;
+  --white-color-3: #adadad;
+  --white-color-4: #999999;
+  --white-color-5: #858585;
+
+  --dark-gray-color: #31363f;
+  --dark-blue-color: #003366;
+  --dark-green-color: #004d00;
+  --dark-purple-color: #5e2a8a;
+
+  --light-blue-color: #59d8ff;
+  --light-green-color: #b2ff59;
+  --light-purple-color: #d4a5d6;
+}

@@ -1,0 +1,167 @@
+.Header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  background: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  transition: 0.4s;
+  z-index: 100;
+
+  &.Header.Main_ACT {
+    background: var(--white-color);
+    border: none;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+
+    .Inner {
+      .gnb .Main_Menu > li {
+        > &:hover a {
+          color: var(--blue-color);
+        }
+        > a {
+          color: #333;
+          text-shadow: none;
+          &.active {
+            color: var(--blue-color);
+          }
+        }
+      }
+
+      .Bar svg {
+        color: #333;
+        &:hover {
+          color: var(--blue-color);
+        }
+      }
+    }
+  }
+
+  .Inner {
+    display: flex;
+    gap: 120px;
+    justify-content: space-between;
+
+    height: 100px;
+    margin: 0 100px;
+
+    .Logo .Route_Link {
+      display: flex;
+      align-items: center;
+      height: 100%;
+
+      .Logo_IMG {
+        height: 50px;
+      }
+    }
+
+    .gnb .Main_Menu {
+      display: flex;
+      gap: 90px;
+      align-items: center;
+      height: 100px;
+
+      > li {
+        > a {
+          position: relative;
+          display: flex;
+          align-items: center;
+          height: 50px;
+
+          border-bottom: 2px solid transparent;
+          color: var(--white-color);
+          text-shadow: 1px 1px 1px #333;
+          transition: 0.4s;
+
+          > &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: var(--blue-color);
+            transition: width 0.4s ease, left 0.4s ease;
+          }
+
+          > &.active {
+            color: var(--blue-color);
+            &::after {
+              width: 100%;
+              left: 0;
+            }
+          }
+        }
+
+        > &:hover > a {
+          color: var(--blue-color);
+          &::after {
+            width: 100%;
+            left: 0;
+          }
+        }
+
+        .Sub_Menu {
+          position: absolute;
+          top: 80px;
+
+          display: flex;
+          gap: 0px;
+          flex-direction: column;
+
+          background: rgba(248, 248, 248, 1);
+          box-shadow: 0 0 10px var(--white-color-1);
+          border-radius: 3px;
+
+          width: 200px;
+          opacity: 0;
+
+          visibility: hidden;
+          overflow: hidden;
+          z-index: 99;
+          transition: 0.4s;
+
+          li a {
+            display: block;
+            padding: 20px;
+            border-bottom: 1px dashed #ddd;
+            background: rgba(248, 248, 248, 1);
+            transition: 0.4s;
+
+            &:hover {
+              padding-left: 35px;
+              background: rgba(0, 168, 234, 0.1);
+            }
+            &.active {
+              background: var(--blue-color);
+              color: var(--white-color);
+            }
+          }
+        }
+
+        &:hover .Sub_Menu {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+
+    .Bar {
+      display: flex;
+      align-items: center;
+      height: 100%;
+
+      svg {
+        font-size: 40px;
+        color: var(--white-color);
+        cursor: pointer;
+        transform: rotate(180deg);
+        transition: 0.4s;
+
+        &:hover {
+          color: var(--blue-color);
+        }
+      }
+    }
+  }
+}
