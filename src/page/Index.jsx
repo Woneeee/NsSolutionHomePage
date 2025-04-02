@@ -51,6 +51,7 @@ const Main = ({ Cur_Sec, setCur_Sec }) => {
     setCur_Sec(idx);
   };
   // handleNavClick 함수는 네비게이션 클릭 시 현재 섹션을 변경하는 역할
+  // Cur_Sec 가 바뀌면 알아서 useEffect 를 통해 다음 페이지 또는 이전 페이지로 스크롤이 됨
 
   return (
     <>
