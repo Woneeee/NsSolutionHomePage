@@ -23,6 +23,7 @@
         height: 20px;
         border: 1px solid rgba(255, 255, 255, 0.5);
         border-radius: 50%;
+        // em태그는 기울임꼴로 표시
 
         &::before {
           content: "";
@@ -38,17 +39,19 @@
           animation: none;
         }
       }
+      // &::before는 주로 SCSS(Sass)에서 사용되는 구문으로, 특정 요소의 ::before 가상 요소를 스타일링할 때 사용
 
       span {
         display: block;
         color: rgba(255, 255, 255, 0.5);
-
         transition: 0.4s;
       }
 
       &.Active span,
       &:hover span {
-        color: var(--white-color);
+        color: var(
+          --white-color
+        ); // var(--white-color)는 CSS 변수로, 화이트 색상으로 설정
       }
     }
 
