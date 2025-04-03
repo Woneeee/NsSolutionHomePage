@@ -3,6 +3,7 @@ import { Debounce } from "../config/Debounce";
 
 const Main = ({ Cur_Sec, setCur_Sec }) => {
   const Ref_Sec = useRef([]);
+  console.log(Ref_Sec.current);
 
   useEffect(() => {
     // 마우스
