@@ -3,7 +3,6 @@ import { Debounce } from "../config/Debounce";
 
 const Main = ({ Cur_Sec, setCur_Sec }) => {
   const Ref_Sec = useRef([]);
-  console.log(Ref_Sec.current);
 
   useEffect(() => {
     // 마우스
@@ -16,6 +15,7 @@ const Main = ({ Cur_Sec, setCur_Sec }) => {
     }, 300);
     // Debounce 는 특정 함수가 일정시간안에 여러번 호출되더라도, 마지막 호출만 처리하도록 만들어줌
     // 이 코드에서는 스크롤 이벤트가 너무 자주 발생하는 것을 방지하고, 사용자가 스크롤을 멈춘 후 일정 시간 지나면 한번만 실행
+    console.log(Ref_Sec.current);
 
     // 키보드
     const handleKeyDown = Debounce((e) => {
