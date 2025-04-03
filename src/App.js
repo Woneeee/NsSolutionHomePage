@@ -37,6 +37,6 @@ const App = () => {
     </>
   );
 };
-// App.js에서 모든 페이지를 라우트로 다 관리하는 것 같음
+// App.js에서 모든 페이지를 라우트로 다 관리
 
 export default App;
